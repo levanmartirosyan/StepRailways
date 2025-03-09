@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Railway Tickets</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="overlay" id="loaderOverlay"></div>
+    <div class="loaderBox" id="loader">
+      <div class="loader"></div>
+    </div>
+    <nav>
+      <div class="container">
+        <a href="/index.html"
+          ><img src="./assets/images/favicon.png" alt="Logo"
+        /></a>
+        <a href="./checkTicket.html">ბილეთების შემოწმება/დაბრუნება</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="ticket">
+        <div class="container">
+          <div class="text">
+            <h1>შეიძინეთ მატარებლის ბილეთები ონლაინ</h1>
+            <p>გისურვებთ ბედნიერ მგზავრობას</p>
+          </div>
+          <form>
+            <p>დაჯავშნეთ მატარებლის ბილეთი</p>
+            <div class="inputs">
+              <div class="dropDown" id="dropDownMenuFrom">
+                <div class="header" id="dropDownOneFrom">
+                  <span id="dropDownOneTextFrom">საიდან</span>
+                  <i class="fa-solid fa-chevron-down" id="chevronIconFrom"></i>
+                  <div class="content" id="dropContentOne"></div>
+                </div>
+              </div>
+
+              <div class="dropDown" id="dropDownMenuTo">
+                <div class="header" id="dropDownOneTo">
+                  <span id="dropDownOneTextTo">სად</span>
+                  <i class="fa-solid fa-chevron-down" id="chevronIconTo"></i>
+                  <div class="content" id="dropContentTwo"></div>
+                </div>
+              </div>
+
+              <input type="date" id="date" placeholder="გამგზავრების თარიღი" />
+              <input
+                type="number"
+                id="passangerAmount"
+                placeholder="მგზავრების რაოდენობა"
+              />
+              <button id="formBtn">ძებნა</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="someInfo">
+        <div class="container">
+          <div class="info">
+            <div class="top">
+              <h1>მატარებლის ბილეთები</h1>
+              <p>
+                რკინიგზის ბილეთების შესაძენად თქვენ დაგჭირდებათ თითოეული
+                მგზავრის პირადი ნომერი. გთხოვთ მოამზადოთ ეს ინფორმაცია წინასწარ.
+              </p>
+            </div>
+            <div class="bottom">
+              <div class="item">
+                <img src="./assets/images/unoffer.png" alt="" />
+                <p>შეუზღუდავი შეთავაზებები</p>
+              </div>
+              <div class="item">
+                <img src="./assets/images/suppor24.png" alt="" />
+                <p>24X7 მხარდაჭერა</p>
+              </div>
+              <div class="item">
+                <img src="./assets/images/secure100.png" alt="" />
+                <p>100% უსაფრთხო</p>
+              </div>
+              <div class="item">
+                <img src="./assets/images/truspay.png" alt="" />
+                <p>100% უსაფრთხო გადახდა</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="copy">
+          <p>©2023 Step Railway. ყველა უფლება დაცულია.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

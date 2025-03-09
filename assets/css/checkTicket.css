@@ -1,0 +1,283 @@
+body main {
+  margin-top: 105px;
+}
+body main section {
+  width: 100%;
+  min-height: 75vh;
+  background-color: #2f47c1;
+}
+body main section .container {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  padding: 20px 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+body main section .container form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 100px;
+}
+body main section .container form input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #4c6aff;
+  border-radius: 4px;
+  padding: 20px;
+  outline: none;
+}
+body main section .container form button {
+  width: 20%;
+  height: 50px;
+  border-radius: 4px;
+  border: 0;
+  background-color: #fff;
+  color: #2f47c1;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+body main section .container form button:hover {
+  background-color: #4c6aff;
+  color: #fff;
+}
+body main section .container .content {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 40px 20px;
+}
+body main section .container .content.active {
+  display: flex;
+}
+body main section .container .content .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body main section .container .content .top .checkMark {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #06bd3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main section .container .content .top .checkMark i {
+  font-size: 24px;
+  color: #fff;
+}
+body main section .container .content .top p {
+  font-size: 20px;
+}
+body main section .container .content .mainContent {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+body main section .container .content .mainContent .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main section .container .content .mainContent .head p {
+  font-weight: bold;
+  font-size: 20px;
+}
+body main section .container .content .mainContent .head img {
+  width: 70px;
+  height: 70px;
+}
+body main section .container .content .mainContent .body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 26px;
+}
+body main section .container .content .mainContent .body .ticketIds {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main section .container .content .mainContent .body .ticketIds p {
+  font-size: 14px;
+}
+body main section .container .content .mainContent .body .ticketIds p span {
+  font-weight: bold;
+}
+body main section .container .content .mainContent .body .tripInfo {
+  width: 100%;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #cecece;
+  padding: 20px 0;
+  border-radius: 4px;
+}
+body main section .container .content .mainContent .body .tripInfo p {
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  border-left: 1px solid #cecece;
+  padding: 0 20px;
+}
+body main section .container .content .mainContent .body .tripInfo p span {
+  font-weight: bold;
+}
+body main section .container .content .mainContent .body .tripInfo p:first-of-type {
+  border: 0;
+}
+body main section .container .content .mainContent .body .contactInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body main section .container .content .mainContent .body .contactInfo div {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+}
+body main section .container .content .mainContent .body .contactInfo div p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 0 20px;
+  font-weight: bold;
+}
+body main section .container .content .mainContent .body .contactInfo div p span {
+  font-weight: 100;
+  padding-left: 6px;
+}
+body main section .container .content .mainContent .body .contactInfo div p:last-of-type {
+  border-left: 1px solid #cecece;
+}
+body main section .container .content .mainContent .body .persons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+body main section .container .content .mainContent .body .persons h4 {
+  margin-bottom: 20px;
+}
+body main section .container .content .mainContent .body .persons div {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+}
+body main section .container .content .mainContent .body .persons div p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 0 20px;
+  border-left: 1px solid #cecece;
+  font-weight: bold;
+}
+body main section .container .content .mainContent .body .persons div p span {
+  font-weight: 100;
+  padding-left: 6px;
+}
+body main section .container .content .mainContent .body .persons div p:first-of-type {
+  border: 0;
+}
+body main section .container .content .mainContent .body .sum {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+body main section .container .content .mainContent .body .sum .sumPrice {
+  max-width: 180px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body main section .container .content .mainContent .body .sum .sumPrice p {
+  font-weight: bold;
+}
+body main section .container .content .mainContent .body .sum .sumPrice p span {
+  padding-left: 50px;
+}
+body main section .container .content .mainContent .body .sum .sumPrice::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  left: 0;
+  right: 0;
+  top: -20px;
+}
+body main section .container .content .mainContent .body .warnings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+body main section .container .content .mainContent .body .warnings p {
+  font-weight: lighter;
+  font-size: 15px;
+}
+body main section .container .content .mainContent .body .warnings p:last-of-type {
+  color: red;
+}
+body main section .container .content .mainContent .body .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+body main section .container .content .mainContent .body .btn button {
+  padding: 0 20px;
+  height: 50px;
+  border: 0;
+  background-color: red;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+body main section .container .content .mainContent .body .btn button:hover {
+  background-color: rgb(184, 0, 0);
+}/*# sourceMappingURL=checkTicket.css.map */
