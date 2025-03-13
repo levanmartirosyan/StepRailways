@@ -41,10 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
                   <p>${item.arrive}</p>
                   <p>${item.to}</p>
                 </th>
-                <th><button>დაჯავშნა</button></th>
+                <th><button onclick='goToDetails(${JSON.stringify(
+                  item
+                )})'>დაჯავშნა</button></th>
               </tr>
             `;
           });
+
           loader.classList.remove("active");
           loaderOverlay.classList.remove("active");
         })
@@ -56,3 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   getAllDepartures();
 });
+
+function goToDetails(data) {
+  sessionStorage.setItem("trainInfo", JSON.stringify(data));
+  window.location.href = "buyTickets.html";
+  console.log(data);
+}

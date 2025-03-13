@@ -1,0 +1,74 @@
+body nav {
+  background-color: #fff;
+}
+body main .header {
+  max-width: 1280px;
+  padding: 0 40px;
+  width: 100%;
+  background-color: #2f47c1;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 105px;
+}
+body main .header h2 {
+  color: #fff;
+}
+body main .mainInfo {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body main .mainInfo .container {
+  max-width: 1280px;
+  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+body main .mainInfo .container .left {
+  width: 100%;
+  flex: 4;
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body main .mainInfo .container .left .trainInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #f4f5fb;
+}
+body main .mainInfo .container .left .trainInfo .id {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+body main .mainInfo .container .left .trainInfo .id p {
+  font-size: 14px;
+}
+body main .mainInfo .container .left .trainInfo .param {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+body main .mainInfo .container .left .trainInfo .param p {
+  font-size: 15px;
+}
+body main .mainInfo .container .left .trainInfo .param p:last-of-type {
+  font-size: 14px;
+}
+body main .mainInfo .container .right {
+  width: 100%;
+  flex: 1;
+}/*# sourceMappingURL=tickets.css.map */

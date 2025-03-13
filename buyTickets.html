@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Railway Tickets</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/tickets.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="overlay" id="loaderOverlay"></div>
+    <div class="loaderBox" id="loader">
+      <div class="loader"></div>
+    </div>
+    <nav>
+      <div class="container">
+        <a href="/index.html"
+          ><img src="./assets/images/favicon.png" alt="Logo"
+        /></a>
+        <a href="./checkTicket.html">ბილეთების შემოწმება/დაბრუნება</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="header">
+        <h2>მგზავრების მონაცემები</h2>
+      </section>
+      <section class="mainInfo">
+        <div class="container">
+          <div class="left">
+            <h4>შეიყვანეთ თქვენი მონაცემები</h4>
+            <div class="trainInfo">
+              <div class="id" id="trainInfoId"></div>
+              <div class="param" id="trainInfodep"></div>
+              <div class="param" id="trainInfoarr"></div>
+            </div>
+          </div>
+          <div class="right">
+            <h3>ინვოისი</h3>
+            <div class="types">
+              <p>ადგილი</p>
+              <p>ფასი</p>
+            </div>
+            <div class="sum">
+              <p>სულ:</p>
+              <span id="sumPrice"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="copy">
+          <p>©2023 Step Railway. ყველა უფლება დაცულია.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/tickets.js"></script>
+  </body>
+</html>
