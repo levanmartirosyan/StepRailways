@@ -1,9 +1,149 @@
 body nav {
   background-color: #fff;
 }
+body main .seatsMenu {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 550px;
+  width: 100%;
+  padding: 20px;
+  z-index: 10000;
+  background-color: #fff;
+  border-radius: 4px;
+  flex-direction: column;
+}
+body main .seatsMenu .top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+body main .seatsMenu .top span {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+body main .seatsMenu .top::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  background-color: #dadada;
+  border-radius: 4px;
+}
+body main .seatsMenu .content {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+body main .seatsMenu .content .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+body main .seatsMenu .content .images div {
+  position: relative;
+}
+body main .seatsMenu .content .images div img {
+  width: 150px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+body main .seatsMenu .content .images div .imgHover1,
+body main .seatsMenu .content .images div .imgHover2,
+body main .seatsMenu .content .images div .imgHover3 {
+  width: 90%;
+  display: none;
+  position: absolute;
+  background-color: #2f47c1;
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body main .seatsMenu .content .images div:nth-child(1):hover img {
+  opacity: 1;
+}
+body main .seatsMenu .content .images div:nth-child(1):hover .imgHover1 {
+  display: flex;
+}
+body main .seatsMenu .content .images div:nth-child(2):hover img {
+  opacity: 1;
+}
+body main .seatsMenu .content .images div:nth-child(2):hover .imgHover2 {
+  display: flex;
+}
+body main .seatsMenu .content .images div:nth-child(3):hover img {
+  opacity: 1;
+}
+body main .seatsMenu .content .images div:nth-child(3):hover .imgHover3 {
+  display: flex;
+}
+body main .seatsMenu .content .images div:nth-child(1).active img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+body main .seatsMenu .content .images div:nth-child(2).active img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+body main .seatsMenu .content .images div:nth-child(3).active img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+body main .seatsMenu .content .seats {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 10px;
+}
+body main .seatsMenu .content .seats .seat-option {
+  width: 50px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgb(2, 180, 2);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+body main .seatsMenu .content .seats .seat-option.active {
+  background-color: rgb(224, 3, 3) !important;
+}
+body main .seatsMenu.active {
+  display: flex;
+}
+body main .overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 9999;
+}
+body main .overlay.active {
+  display: flex;
+}
 body main .header {
   max-width: 1280px;
   padding: 0 40px;
+  margin: 0 auto;
   width: 100%;
   background-color: #2f47c1;
   height: 300px;
@@ -25,9 +165,11 @@ body main .mainInfo {
 body main .mainInfo .container {
   max-width: 1280px;
   padding: 0 40px;
+  margin: 0 auto;
   width: 100%;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 20px;
 }
 body main .mainInfo .container .left {
@@ -48,6 +190,7 @@ body main .mainInfo .container .left .trainInfo {
   border-radius: 4px;
   padding: 20px;
   background-color: #f4f5fb;
+  position: relative;
 }
 body main .mainInfo .container .left .trainInfo .id {
   display: flex;
@@ -67,6 +210,122 @@ body main .mainInfo .container .left .trainInfo .param p {
 }
 body main .mainInfo .container .left .trainInfo .param p:last-of-type {
   font-size: 14px;
+}
+body main .mainInfo .container .left .trainInfo::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  background-color: #dadada;
+  border-radius: 4px;
+}
+body main .mainInfo .container .left h4:nth-child(3) {
+  margin-top: 30px;
+}
+body main .mainInfo .container .left .contactInfo {
+  width: 100%;
+}
+body main .mainInfo .container .left .contactInfo form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+body main .mainInfo .container .left .contactInfo form input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  padding: 0 16px;
+  outline: none;
+}
+body main .mainInfo .container .left .contactInfo form input[type=number]::-webkit-inner-spin-button, body main .mainInfo .container .left .contactInfo form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body main .mainInfo .container .left .contactInfo form input[type=number] {
+  -moz-appearance: textfield;
+}
+body main .mainInfo .container .left .passengerInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body main .mainInfo .container .left .passengerInfo .passenger {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields .seat {
+  max-width: 110px;
+  width: 100%;
+  height: 40px;
+  background-color: #2f47c1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields .seat p {
+  color: #fff;
+  font-size: 15px;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields .seat:hover {
+  background-color: #4c6aff;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields form input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  padding: 0 16px;
+  outline: none;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields form input[type=number]::-webkit-inner-spin-button, body main .mainInfo .container .left .passengerInfo .passenger .fields form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields form input[type=number] {
+  -moz-appearance: textfield;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields button {
+  max-width: 100px;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #2f47c1;
+  transition: 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}
+body main .mainInfo .container .left .passengerInfo .passenger .fields button:hover {
+  background-color: #4c6aff;
 }
 body main .mainInfo .container .right {
   width: 100%;

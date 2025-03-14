@@ -46,6 +46,15 @@
               <div class="param" id="trainInfodep"></div>
               <div class="param" id="trainInfoarr"></div>
             </div>
+            <h4>საკონტაქტო ინფორმაცია</h4>
+            <div class="contactInfo">
+              <form>
+                <input type="email" required placeholder="ელ.ფოსტა" />
+                <input type="number" required placeholder="ტელეფონის ნომერი" />
+              </form>
+            </div>
+            <h4>მგზავრების ინფორმაცია</h4>
+            <div class="passengerInfo" id="passengerInfo"></div>
           </div>
           <div class="right">
             <h3>ინვოისი</h3>
@@ -60,6 +69,31 @@
           </div>
         </div>
       </section>
+      <div class="overlay active" id="overlay"></div>
+      <div class="seatsMenu active" id="seatsMenu">
+        <div class="top">
+          <span id="closeMenu">X</span>
+        </div>
+        <div class="content">
+          <div class="images">
+            <div id="firstClass">
+              <img src="./assets/images/firstWagon.png" alt="" />
+              <p class="imgHover1">I კლასი</p>
+            </div>
+            <div id="secondClass">
+              <img src="./assets/images/midWagon.png" alt="" />
+              <p class="imgHover2">II კლასი</p>
+            </div>
+            <div id="businessClass">
+              <img src="./assets/images/lastWagon.png" alt="" />
+              <p class="imgHover3">ბიზნესი</p>
+            </div>
+          </div>
+          <h4 id="chooseVagon">აირჩიეთ ვაგონი</h4>
+
+          <div class="seats"></div>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="container">

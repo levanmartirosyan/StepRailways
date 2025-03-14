@@ -7,9 +7,167 @@ body {
     background-color: $secondary;
   }
   main {
+    .seatsMenu {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 550px;
+      width: 100%;
+      padding: 20px;
+      z-index: 10000;
+      background-color: $secondary;
+      border-radius: 4px;
+      flex-direction: column;
+      .top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        span {
+          cursor: pointer;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          left: 0;
+          right: 0;
+          bottom: -20px;
+          background-color: #dadada;
+          border-radius: 4px;
+        }
+      }
+      .content {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        .images {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2px;
+          div {
+            position: relative;
+            img {
+              width: 150px;
+              cursor: pointer;
+              opacity: 0.5;
+            }
+            .imgHover1,
+            .imgHover2,
+            .imgHover3 {
+              width: 90%;
+              display: none;
+              position: absolute;
+              background-color: #2f47c1;
+              color: $secondary;
+              border-radius: 12px;
+              padding: 10px 20px;
+              align-items: center;
+              justify-content: center;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+            &:nth-child(1):hover {
+              img {
+                opacity: 1;
+              }
+              .imgHover1 {
+                display: flex;
+              }
+            }
+            &:nth-child(2):hover {
+              img {
+                opacity: 1;
+              }
+              .imgHover2 {
+                display: flex;
+              }
+            }
+            &:nth-child(3):hover {
+              img {
+                opacity: 1;
+              }
+              .imgHover3 {
+                display: flex;
+              }
+            }
+            &:nth-child(1) {
+              &.active {
+                img {
+                  opacity: 1;
+                  transform: scale(1.05);
+                }
+              }
+            }
+            &:nth-child(2) {
+              &.active {
+                img {
+                  opacity: 1;
+                  transform: scale(1.05);
+                }
+              }
+            }
+            &:nth-child(3) {
+              &.active {
+                img {
+                  opacity: 1;
+                  transform: scale(1.05);
+                }
+              }
+            }
+          }
+        }
+        .seats {
+          display: none;
+          grid-template-columns: repeat(4, 1fr);
+          justify-content: center;
+          gap: 10px;
+          .seat-option {
+            width: 50px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: rgb(2, 180, 2);
+            border: 0;
+            color: $secondary;
+            cursor: pointer;
+            &.active {
+              background-color: rgb(224, 3, 3) !important;
+            }
+          }
+        }
+      }
+      &.active {
+        display: flex;
+      }
+    }
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      display: none;
+      z-index: 9999;
+      &.active {
+        display: flex;
+      }
+    }
     .header {
       max-width: 1280px;
       padding: 0 40px;
+      margin: 0 auto;
       width: 100%;
       background-color: $primary;
       height: 300px;
@@ -30,9 +188,11 @@ body {
       .container {
         max-width: 1280px;
         padding: 0 40px;
+        margin: 0 auto;
         width: 100%;
         display: flex;
         align-items: flex-start;
+        justify-content: space-between;
         gap: 20px;
         .left {
           width: 100%;
@@ -51,6 +211,7 @@ body {
             border-radius: 4px;
             padding: 20px;
             background-color: #f4f5fb;
+            position: relative;
             .id {
               display: flex;
               flex-direction: column;
@@ -67,6 +228,126 @@ body {
                 font-size: 15px;
                 &:last-of-type {
                   font-size: 14px;
+                }
+              }
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              left: 0;
+              right: 0;
+              bottom: -30px;
+              background-color: #dadada;
+              border-radius: 4px;
+            }
+          }
+          h4 {
+            &:nth-child(3) {
+              margin-top: 30px;
+            }
+          }
+          .contactInfo {
+            width: 100%;
+            form {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 20px;
+              input {
+                width: 100%;
+                height: 50px;
+                border: 1px solid #dadada;
+                border-radius: 4px;
+                padding: 0 16px;
+                outline: none;
+                &[type="number"]::-webkit-inner-spin-button,
+                &[type="number"]::-webkit-outer-spin-button {
+                  -webkit-appearance: none;
+                  margin: 0;
+                }
+                &[type="number"] {
+                  -moz-appearance: textfield;
+                }
+              }
+            }
+          }
+          .passengerInfo {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .passenger {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              align-items: flex-start;
+              margin-top: 20px;
+              .fields {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 5px;
+                .seat {
+                  max-width: 110px;
+                  width: 100%;
+                  height: 40px;
+                  background-color: $primary;
+                  border-radius: 4px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  transition: 0.3s ease;
+                  cursor: pointer;
+                  p {
+                    color: $secondary;
+                    font-size: 15px;
+                  }
+                  &:hover {
+                    background-color: $primary-hover;
+                  }
+                }
+                form {
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  gap: 5px;
+                  input {
+                    width: 100%;
+                    height: 40px;
+                    border: 1px solid #dadada;
+                    border-radius: 4px;
+                    padding: 0 16px;
+                    outline: none;
+                    &[type="number"]::-webkit-inner-spin-button,
+                    &[type="number"]::-webkit-outer-spin-button {
+                      -webkit-appearance: none;
+                      margin: 0;
+                    }
+                    &[type="number"] {
+                      -moz-appearance: textfield;
+                    }
+                  }
+                }
+                button {
+                  max-width: 100px;
+                  width: 100%;
+                  height: 40px;
+                  border: 0;
+                  border-radius: 4px;
+                  background-color: $primary;
+                  transition: 0.3s ease;
+                  cursor: pointer;
+                  color: $secondary;
+                  font-size: 14px;
+                  &:hover {
+                    background-color: $primary-hover;
+                  }
                 }
               }
             }
